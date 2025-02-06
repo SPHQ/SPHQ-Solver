@@ -14,11 +14,14 @@
     "upgrade": "ncu -u && pnpm install"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "install": "^0.13.0",
     "npm": "^11.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-feather": "^2.0.10",
     "react-icons": "^5.4.0",
+    "tailwind-merge": "^3.0.1",
     "zod": "^3.24.1"
   },
   "devDependencies": {
