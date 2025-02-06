@@ -16,7 +16,7 @@ import {
 import { BottomMenu, LeftMenu, MenuItem } from "./MainMenu";
 import { PythonShell } from "./PythonShell";
 import { TreeView, MockData } from "./TreeView";
-import { Viewer } from "./Viewer";
+import { ViewerComponent } from "./Viewer";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -24,7 +24,7 @@ export const App: FC = () => {
   const leftIconSize = 24;
   const bottomIconSize = 16;
   return (
-    <div className="h-screen w-screen flex flex-row select-none text-sm">
+    <div className="h-screen w-screen flex flex-row select-none text-sm transition-none">
       <LeftMenu>
         <MenuItem
           name="Configuration"
@@ -49,8 +49,8 @@ export const App: FC = () => {
           group={1}
         />
       </LeftMenu>
-      <div className="flex-1 flex flex-col">
-        <Viewer />
+      <div className="flex-grow flex flex-col">
+        <ViewerComponent />
         <BottomMenu>
           <MenuItem
             name="Python shell"

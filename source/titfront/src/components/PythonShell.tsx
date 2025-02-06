@@ -43,7 +43,7 @@ export const PythonShell: FC = () => {
           {
             input,
             status: result instanceof PyError ? "failure" : "success",
-            output: (result as string).toString(),
+            output: JSON.stringify(result),
           },
           ...commands.slice(cmdIndex + 1),
         ]);
